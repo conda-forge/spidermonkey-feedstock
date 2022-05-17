@@ -1,5 +1,5 @@
 {% set name = "spidermonkey" %}
-{% set version = "91.8.0" %}
+{% set version = "91.9.0" %}
 {% set majorversion = version.split('.')[0] %}
 
 package:
@@ -8,14 +8,14 @@ package:
 
 source:
   url: https://releases.mozilla.org/pub/firefox/releases/{{ version }}esr/source/firefox-{{ version }}esr.source.tar.xz
-  sha256: d483a853cbf5c7f93621093432e3dc0b7ed847f2a5318b964828d19f9f087f3a
+  sha256: b4beea934c2ff67d93539c0a4a563f7c5fb8e2d231b05f082b1d8a73ee54ba9c
   patches:
     - 0000-fix-config.patch
     - 0001-va-args.patch
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('spidermonkey', max_pin='x') }}
   script_env:
@@ -68,7 +68,7 @@ outputs:
 
 about:
   home: https://spidermonkey.dev/
-  summary: "Mozilla's JavaScript engine written in C/C++"
+  summary: Mozilla's JavaScript engine written in C/C++
   license: MPL-2.0
   license_family: MOZILLA
   license_file:
