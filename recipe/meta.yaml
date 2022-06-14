@@ -27,7 +27,7 @@ requirements:
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - pkg-config
-    - m4
+    - m4  # [unix]
     - make
     - python >=3.7
     - perl >=5
