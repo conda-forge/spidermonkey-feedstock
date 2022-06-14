@@ -14,7 +14,7 @@ source:
     - 0001-va-args.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('spidermonkey', max_pin='x') }}
   script_env:
