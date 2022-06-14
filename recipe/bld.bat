@@ -5,7 +5,7 @@ set LLVM_OBJDUMP=objdump
 set CPPFLAGS="-D__STDC_FORMAT_MACROS $CPPFLAGS"
 
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
-# We can't build in js/src/, so create a build dir
+@rem We can't build in js/src/, so create a build dir
 mkdir obj
 cd obj/
 python ../configure.py ^
