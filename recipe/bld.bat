@@ -4,7 +4,7 @@ dir
 
 @REM cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 
-.\MozillaBuildSetup-4.0.1.exe /S
+.\MozillaBuildSetup-3.4.exe /S
 if errorlevel 1 exit 1
 
 @rem We can't build in js/src/, so create a build dir
