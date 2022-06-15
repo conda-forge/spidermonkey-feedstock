@@ -7,11 +7,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://releases.mozilla.org/pub/firefox/releases/{{ version }}esr/source/firefox-{{ version }}esr.source.tar.xz
-  sha256: 825a8cb38bb5da9821ef87cc6de64af007cf0faef07c4ed0651283b56a0ee1bb
-  patches:
-    - 0000-fix-config.patch
-    - 0001-va-args.patch
+  - url: https://releases.mozilla.org/pub/firefox/releases/{{ version }}esr/source/firefox-{{ version }}esr.source.tar.xz
+    sha256: 825a8cb38bb5da9821ef87cc6de64af007cf0faef07c4ed0651283b56a0ee1bb
+    patches:
+      - 0000-fix-config.patch
+      - 0001-va-args.patch
+  - url: https://ftp.mozilla.org/pub/mozilla/libraries/win32/MozillaBuildSetup-4.0.1.exe  # [win]
+    sha256: 7e22a2c44759f8eebdee3628c0fcd89515668571a7e06cc62a3ea9dc138b0390  # [win]
 
 build:
   number: 1
