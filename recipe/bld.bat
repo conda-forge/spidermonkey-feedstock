@@ -9,7 +9,7 @@ if errorlevel 1 exit 1
 
 @rem We can't build in js/src/, so create a build dir
 mkdir obj
-copy %SRC_DIR%\.mozconfig obj\.mozconfig
+copy %RECIPE_DIR%\.mozconfig obj\.mozconfig
 
 cd obj
 echo "ac_add_options --prefix=%PREFIX%" >> .mozconfig
