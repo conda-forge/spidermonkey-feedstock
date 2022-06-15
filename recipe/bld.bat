@@ -1,3 +1,5 @@
+echo on
+
 dir
 
 @REM cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
