@@ -7,15 +7,16 @@ package:
   version: {{ version }}
 
 source:
-  url: https://releases.mozilla.org/pub/firefox/releases/{{ version }}esr/source/firefox-{{ version }}esr.source.tar.xz
-  sha256: 825a8cb38bb5da9821ef87cc6de64af007cf0faef07c4ed0651283b56a0ee1bb
-  patches:
-    - 0000-fix-config.patch
-    - 0001-va-args.patch
+  - url: https://releases.mozilla.org/pub/firefox/releases/{{ version }}esr/source/firefox-{{ version }}esr.source.tar.xz
+    sha256: 825a8cb38bb5da9821ef87cc6de64af007cf0faef07c4ed0651283b56a0ee1bb
+    patches:
+      - 0000-fix-config.patch
+      - 0001-va-args.patch
+  - url: https://ftp.mozilla.org/pub/mozilla/libraries/win32/MozillaBuildSetup-3.4.exe  # [win]
+    sha256: cec9ae47a939445783ec9eaa8425654d2417906b59e7d8ff6538d91c8f2b21ce  # [win]
 
 build:
-  skip: true  # [win]
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('spidermonkey', max_pin='x') }}
   script_env:
@@ -28,7 +29,7 @@ requirements:
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
     - pkg-config
-    - m4
+    - m4  # [unix]
     - make
     - python >=3.7
     - perl >=5
