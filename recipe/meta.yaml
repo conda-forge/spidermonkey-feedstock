@@ -1,5 +1,5 @@
 {% set name = "spidermonkey" %}
-{% set version = "91.10.0" %}
+{% set version = "91.11.0" %}
 {% set majorversion = version.split('.')[0] %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://releases.mozilla.org/pub/firefox/releases/{{ version }}esr/source/firefox-{{ version }}esr.source.tar.xz
-  sha256: 825a8cb38bb5da9821ef87cc6de64af007cf0faef07c4ed0651283b56a0ee1bb
+  sha256: e59bbe92ee1ef94936ce928324253e442748d62b5777bc0846ad79ed4a2a05a4
   patches:
     - 0000-fix-config.patch
     - 0001-va-args.patch
