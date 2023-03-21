@@ -1,11 +1,22 @@
+About spidermonkey-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spidermonkey-feedstock/blob/main/LICENSE.txt)
+
 About spidermonkey
-==================
+------------------
 
 Home: https://spidermonkey.dev/
 
 Package license: MPL-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spidermonkey-feedstock/blob/main/LICENSE.txt)
+Summary: Mozilla's JavaScript engine written in C/C++
+About spidermonkey-bin
+----------------------
+
+Home: https://spidermonkey.dev/
+
+Package license: MPL-2.0
 
 Summary: Mozilla's JavaScript engine written in C/C++
 
@@ -30,14 +41,14 @@ Current build status
               <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16185&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spidermonkey-feedstock?branchName=main&jobName=linux&configuration=linux_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spidermonkey-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=16185&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spidermonkey-feedstock?branchName=main&jobName=osx&configuration=osx_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/spidermonkey-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
             </tr>
