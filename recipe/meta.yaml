@@ -15,7 +15,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('spidermonkey', max_pin='x') }}
   script_env:
@@ -30,7 +30,7 @@ requirements:
     - pkg-config
     - m4
     - make
-    - python >=3.7
+    - python >=3.7,<3.11
     - perl >=5
     - pip
   host:
