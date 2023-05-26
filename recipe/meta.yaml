@@ -30,7 +30,7 @@ requirements:
     - pkg-config
     - m4
     - make
-    - python >=3.7
+    - python >=3.7,<3.11
     - perl >=5
     - pip
   host:
