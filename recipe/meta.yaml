@@ -33,7 +33,7 @@ requirements:
     - perl >=5
     - pip
   host:
-    - icu >=73.1
+    - icu
     - zlib
 
 outputs:
@@ -55,7 +55,7 @@ outputs:
         - make
         - python >=3.7
       host:
-        - icu >=73.1
+        - icu
         - zlib
     test:
       commands:
