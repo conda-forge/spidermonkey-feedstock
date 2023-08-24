@@ -55,7 +55,7 @@ outputs:
         - make
         - python >=3.7
       host:
-        - icu
+        - icu >=73.1
         - zlib
     test:
       commands:
