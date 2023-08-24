@@ -1,21 +1,20 @@
-{% set name = "spidermonkey" %}
-{% set version = "91.13.0" %}
+{% set version = "115.0.3" %}
 {% set majorversion = version.split('.')[0] %}
 
 package:
-  name: {{ name|lower }}
+  name: spidermonkey
   version: {{ version }}
 
 source:
   url: https://releases.mozilla.org/pub/firefox/releases/{{ version }}esr/source/firefox-{{ version }}esr.source.tar.xz
-  sha256: 53be2bcde0b5ee3ec106bd8ba06b8ae95e7d489c484e881dfbe5360e4c920762
-  patches:
-    - 0000-fix-config.patch
-    - 0001-va-args.patch
+  sha256: 0bcc571c44f94ac6b8c26e896fd771eb7bd41b2a8ec35598bced0102c1b855fa
+  # patches:
+  #   - 0000-fix-config.patch
+  #   - 0001-va-args.patch
 
 build:
   skip: true  # [win]
-  number: 1
+  number: 0
   run_exports:
     - {{ pin_subpackage('spidermonkey', max_pin='x') }}
   script_env:
@@ -34,7 +33,7 @@ requirements:
     - perl >=5
     - pip
   host:
-    - icu
+    - icu >=73.1
     - zlib
 
 outputs:
@@ -67,7 +66,7 @@ outputs:
         - test ! -f $PREFIX/include/mozjs-{{ majorversion }}/jsapi.h  # [unix]
 
 about:
-  home: https://spidermonkey.dev/
+  home: https://spidermonkey.dev
   summary: Mozilla's JavaScript engine written in C/C++
   license: MPL-2.0
   license_family: MOZILLA
@@ -75,6 +74,9 @@ about:
     - THIRDPARTY.yml
     - LICENSE
     - toolkit/content/license.html
+  dev_url: https://hg.mozilla.org/mozilla-central/file/tip/js
+  doc_url: https://spidermonkey.dev/docs
+
 
 extra:
   recipe-maintainers:
