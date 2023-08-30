@@ -3,6 +3,7 @@ About spidermonkey-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/spidermonkey-feedstock/blob/main/LICENSE.txt)
 
+
 About spidermonkey
 ------------------
 
@@ -11,6 +12,7 @@ Home: https://spidermonkey.dev/
 Package license: MPL-2.0
 
 Summary: Mozilla's JavaScript engine written in C/C++
+
 About spidermonkey-bin
 ----------------------
 
