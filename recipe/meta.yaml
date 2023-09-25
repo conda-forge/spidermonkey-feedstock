@@ -1,4 +1,4 @@
-{% set version = "115.0.3" %}
+{% set version = "115.3.0" %}
 {% set majorversion = version.split('.')[0] %}
 
 package:
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://releases.mozilla.org/pub/firefox/releases/{{ version }}esr/source/firefox-{{ version }}esr.source.tar.xz
-  sha256: 0bcc571c44f94ac6b8c26e896fd771eb7bd41b2a8ec35598bced0102c1b855fa
+  sha256: 8a1dc50b3d81df3b8ee8ef191551a355c9b139f09688a3fb61234b2f6d7670ca
   # patches:
   #   - 0000-fix-config.patch
   #   - 0001-va-args.patch
