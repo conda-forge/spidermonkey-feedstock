@@ -26,12 +26,13 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
-    - pkg-config
+    - lld  # [osx]
     - m4
     - make
     - python >=3.7,<3.11
     - perl >=5
     - pip
+    - pkg-config
   host:
     - icu
     - zlib
