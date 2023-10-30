@@ -3,6 +3,7 @@ export M4=m4
 export AWK=awk
 export LLVM_OBJDUMP=objdump
 export CPPFLAGS="-D__STDC_FORMAT_MACROS $CPPFLAGS"
+export BINDGEN_EXTRA_CLANG_ARGS="${CPPFLAGS} ${CFLAGS} ${LDFLAGS}"
 
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 # We can't build in js/src/, so create a build dir
