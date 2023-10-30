@@ -2,6 +2,7 @@ export LIBXUL_DIST=$out
 export M4=m4
 export AWK=awk
 export LLVM_OBJDUMP=objdump
+export PKG_CONFIG=${BUILD_PREFIX}/bin/pkg-config
 export CPPFLAGS="-D__STDC_FORMAT_MACROS $CPPFLAGS"
 
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
