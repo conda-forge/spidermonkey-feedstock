@@ -3,7 +3,13 @@ export M4=m4
 export AWK=awk
 export LLVM_OBJDUMP=objdump
 export CPPFLAGS="-D__STDC_FORMAT_MACROS $CPPFLAGS"
-export BINDGEN_EXTRA_CLANG_ARGS="${CPPFLAGS} ${CFLAGS} ${LDFLAGS}"
+
+if [[ "$(uname)" == "Darwin" ]]; then
+       # ERROR: --with-system-icu is not supported with bootstrapped sysroot. Drop the option, or use --without-sysroot or --disable-bootstrap
+       export CONFIG_PY_ARGS=""
+else
+       export CONFIG_PY_ARGS="--with-system-icu"
+fi
 
 cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
 # We can't build in js/src/, so create a build dir
@@ -19,9 +25,9 @@ python ../configure.py \
        --enable-hardening \
        --with-intl-api \
        --build-backends=RecursiveMake \
-       --with-system-icu \
        --disable-debug \
        --enable-gczeal \
        --enable-strip \
-       --disable-install-strip
+       --disable-install-strip \
+       $CONFIG_PY_ARGS
 make -j$CPU_COUNT
