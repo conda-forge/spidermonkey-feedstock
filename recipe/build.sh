@@ -30,4 +30,4 @@ python ../configure.py \
        --enable-strip \
        --disable-install-strip \
        $CONFIG_PY_ARGS
-make -j$CPU_COUNT
+make # TOOD: restore -j$CPU_COUNT
