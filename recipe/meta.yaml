@@ -29,7 +29,6 @@ requirements:
     - lld  # [osx]
     - m4
     - make
-    - mold  # [osx]
     - python >=3.7,<3.11
     - perl >=5
     - pip
