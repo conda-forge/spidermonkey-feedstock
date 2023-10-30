@@ -34,8 +34,6 @@ requirements:
     - pip
     - pkg-config
   host:
-    - icu
-    - nspr
     - zlib
 
 outputs:

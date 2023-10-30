@@ -26,7 +26,6 @@ python ../configure.py \
        --enable-shared-js \
        --enable-strip \
        --with-intl-api \
-       --with-system-icu \
-       --with-system-zlib \
-       --with-system-nspr
+       --without-system-icu \
+       --with-system-zlib
 make # TOOD: restore -j$CPU_COUNT
