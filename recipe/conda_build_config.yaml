@@ -1,4 +1,7 @@
+# https://firefox-source-docs.mozilla.org/widget/cocoa/sdks.html#supported-sdks
 MACOSX_DEPLOYMENT_TARGET:  # [osx and x86_64]
   - "10.12"                # [osx and x86_64]
 MACOSX_SDK_VERSION:        # [osx and x86_64]
-  - "10.12"                # [osx and x86_64]
+  - "13.3"                 # [osx and x86_64]
+icu:
+  - "73"
