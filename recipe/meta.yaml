@@ -15,7 +15,7 @@ source:
 
 build:
   skip: true  # [win]
-  number: 2
+  number: 3
   run_exports:
     - {{ pin_subpackage('spidermonkey', max_pin='x') }}
   script_env:
@@ -24,6 +24,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
@@ -52,6 +53,7 @@ outputs:
     requirements:
       build:
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         - {{ compiler('cxx') }}
         - make
         - python >=3.7
